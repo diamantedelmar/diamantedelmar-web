@@ -1,129 +1,148 @@
-/*
-    Diamante del mar Aegean Signature Suites
-    main.js
-*/
-
-document.addEventListener('DOMContentLoaded', function() {
-
-    // --- Sticky Header ---
-    const header = document.getElementById('main-header');
-    if (header) {
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-    }
-
-    // --- Testimonial Slider ---
-    const testimonials = document.querySelectorAll('.testimonial');
-    if (testimonials.length > 0) {
-        let currentTestimonial = 0;
-        
-        function showTestimonial(index) {
-            testimonials.forEach((testimonial, i) => {
-                testimonial.classList.remove('active');
-                if (i === index) {
-                    testimonial.classList.add('active');
+document.addEventListener('DOMContentLoaded', () => {
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            // Check if it's an internal link within the same page (e.g., #section)
+            if (this.pathname === window.location.pathname && this.hash !== '') {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - document.querySelector('.main-header').offsetHeight,
+                        behavior: 'smooth'
+                    });
                 }
+            }
+            // If it's a link to a different page, let default behavior happen
+        });
+    });
+
+    // Sticky Header
+    const header = document.querySelector('.main-header');
+    const headerHeight = header.offsetHeight;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > headerHeight) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    // Hamburger Menu for Mobile
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.main-nav');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    // Close mobile menu when a link is clicked
+    navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (navMenu.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+    });
+
+    // Testimonial Slider (Index Page)
+    const testimonialSlider = document.querySelector('.testimonial-slider');
+    if (testimonialSlider) {
+        let currentSlide = 0;
+        const testimonials = testimonialSlider.querySelectorAll('.testimonial-item');
+        const totalSlides = testimonials.length;
+        const sliderDotsContainer = document.querySelector('.slider-dots');
+
+        // Create dots
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => showSlide(i));
+            sliderDotsContainer.appendChild(dot);
+        }
+
+        const dots = sliderDotsContainer.querySelectorAll('.dot');
+
+        function showSlide(index) {
+            testimonials.forEach((slide, i) => {
+                slide.style.display = 'none';
+                dots[i].classList.remove('active');
             });
+            testimonials[index].style.display = 'block';
+            dots[index].classList.add('active');
+            currentSlide = index;
         }
 
-        function nextTestimonial() {
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-            showTestimonial(currentTestimonial);
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
         }
 
-        setInterval(nextTestimonial, 5000); // Change testimonial every 5 seconds
-        showTestimonial(0); // Show the first one initially
+        // Initialize slider
+        showSlide(currentSlide);
+        setInterval(nextSlide, 5000); // Change slide every 5 seconds
     }
 
-    // --- Gallery Filtering ---
-    const filterContainer = document.querySelector('.gallery-filters');
-    const galleryItems = document.querySelectorAll('.gallery-grid .gallery-item');
-    if (filterContainer && galleryItems.length > 0) {
-        filterContainer.addEventListener('click', (e) => {
-            if (e.target.classList.contains('filter-btn')) {
-                // Update active button
-                filterContainer.querySelector('.active').classList.remove('active');
-                e.target.classList.add('active');
 
-                const filterValue = e.target.getAttribute('data-filter');
-                
-                galleryItems.forEach(item => {
-                    if (item.classList.contains(filterValue.replace('.', '')) || filterValue === '*') {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            }
-        });
-    }
-    
-    // --- Gallery Lightbox ---
+    // Gallery Lightbox
+    const galleryItems = document.querySelectorAll('.gallery-item img');
     const lightbox = document.getElementById('lightbox');
-    if (lightbox) {
-        const lightboxImg = document.getElementById('lightbox-img');
-        const galleryGrid = document.querySelector('.gallery-grid');
-        const closeBtn = document.querySelector('.lightbox-close');
-        const prevBtn = document.querySelector('.lightbox-prev');
-        const nextBtn = document.querySelector('.lightbox-next');
-        let currentImageIndex;
-        let images = [];
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.close-btn');
 
-        galleryGrid.addEventListener('click', e => {
-            if (e.target.tagName === 'IMG') {
-                images = Array.from(galleryGrid.querySelectorAll('img'));
-                currentImageIndex = images.indexOf(e.target);
-                lightbox.style.display = 'block';
-                lightboxImg.src = e.target.src;
-            }
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            lightbox.style.display = 'block';
+            lightboxImg.src = item.src;
+            lightboxImg.alt = item.alt;
         });
+    });
 
-        function showImage(index) {
-            if (index >= images.length) index = 0;
-            if (index < 0) index = images.length - 1;
-            lightboxImg.src = images[index].src;
-            currentImageIndex = index;
+    closeBtn.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.style.display = 'none';
         }
+    });
 
-        closeBtn.addEventListener('click', () => lightbox.style.display = 'none');
-        prevBtn.addEventListener('click', () => showImage(currentImageIndex - 1));
-        nextBtn.addEventListener('click', () => showImage(currentImageIndex + 1));
-        
-        lightbox.addEventListener('click', e => {
-            if (e.target === lightbox) {
-                 lightbox.style.display = 'none';
-            }
+    // Apartment thumbnail gallery (Apartments Page)
+    document.querySelectorAll('.apartment-gallery').forEach(gallery => {
+        const mainImage = gallery.querySelector('img:first-child');
+        const thumbnails = gallery.querySelectorAll('.thumbnail-grid img');
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                mainImage.src = thumbnail.src;
+                mainImage.alt = thumbnail.alt;
+            });
         });
-    }
+    });
 
 
-    // --- Contact Form Submission ---
-    const contactForm = document.getElementById('contact-form');
+    // Contact Form Submission (Contact Page)
+    const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevent the default form submission
-            
-            // Here you would typically send the form data to a server
-            // For this project, we'll just show the confirmation message
-            
-            // Basic validation check
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
+            e.preventDefault(); // Prevent actual form submission
 
-            if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
-                alert('Παρακαλώ συμπληρώστε όλα τα απαραίτητα πεδία.');
-                return;
+            // Basic validation (browser's HTML5 validation handles most of it)
+            if (this.checkValidity()) {
+                // In a real application, you'd send this data to a server
+                // using fetch() or XMLHttpRequest here.
+                alert('Το μήνυμά σας εστάλη. Θα επικοινωνήσουμε σύντομα μαζί σας!');
+                this.reset(); // Clear the form
+            } else {
+                // This branch usually handles cases where browser validation fails or custom validation is added
+                alert('Παρακαλούμε συμπληρώστε όλα τα απαιτούμενα πεδία σωστά.');
             }
-            
-            // Show confirmation and reset form
-            alert('Το μήνυμά σας εστάλη. Θα επικοινωνήσουμε σύντομα μαζί σας!');
-            contactForm.reset();
         });
     }
 

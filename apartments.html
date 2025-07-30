@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Οι Σουίτες μας - Deluxe, Superior & Grand | Diamante del mar Κως</title>
-    <meta name="description" content="Εξερευνήστε τις πολυτελείς σουίτες μας: Deluxe Studio, Superior Apartment και Grand Suite με ιδιωτικό jacuzzi. Βρείτε την ιδανική διαμονή για εσάς στην Κω.">
+    <title>Τα Διαμερίσματα | Diamante del mar Apartments στην Κω</title>
+    <meta name="description" content="Εξερευνήστε τα πολυτελή μας Deluxe Studios, Superior Apartments και Grand Suites με jacuzzi στα Diamante del mar στην Κω.">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <!-- Header -->
-    <header id="main-header">
+    <header class="main-header">
         <div class="container">
-            <a href="index.html" class="logo">Diamante del mar</a>
-            <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo/diamante-logo.png" alt="Diamante del mar Logo">
+                </a>
+            </div>
+            <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">Αρχική</a></li>
                     <li><a href="apartments.html" class="active">Διαμερίσματα</a></li>
@@ -25,144 +25,147 @@
                     <li><a href="contact.html">Επικοινωνία</a></li>
                 </ul>
             </nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
     <main>
-        <section class="page-header">
+        <section class="page-hero apartment-hero">
+            <div class="page-hero-content">
+                <h1>Τα Διαμερίσματά Μας</h1>
+                <p>Επιλέξτε το ιδανικό κατάλυμα για τις αξέχαστες διακοπές σας.</p>
+            </div>
+        </section>
+
+        <section id="deluxe-studio" class="apartment-type section-padding">
             <div class="container">
-                <h1>Τα Διαμερίσματά μας</h1>
-                <p>Κάθε σουίτα είναι μοναδικά σχεδιασμένη για να προσφέρει μια αίσθηση πολυτέλειας και άνεσης, με εκπληκτική θέα και σύγχρονες παροχές.</p>
+                <div class="apartment-details">
+                    <div class="apartment-text">
+                        <h2>Deluxe Studio με ιδιωτικό μπαλκόνι</h2>
+                        <p class="capacity-info">Για 2 άτομα | 35 τ.μ.</p>
+                        <p>Το Deluxe Studio είναι σχεδιασμένο για ζευγάρια που αναζητούν άνεση και στυλ. Διαθέτει ένα ευρύχωρο υπνοδωμάτιο με king-size κρεβάτι, πλήρως εξοπλισμένη κουζίνα για τις ανάγκες σας και ιδιωτικό μπαλκόνι όπου μπορείτε να απολαύσετε τον πρωινό σας καφέ ή ένα ποτήρι κρασί το βράδυ.</p>
+                        <h3>Παροχές:</h3>
+                        <ul class="amenities-list">
+                            <li>King-size κρεβάτι</li>
+                            <li>Πλήρως εξοπλισμένη κουζίνα (ψυγείο, εστίες, μαγειρικά σκεύη)</li>
+                            <li>Ιδιωτικό μπαλκόνι</li>
+                            <li>Κλιματισμός</li>
+                            <li>Δωρεάν Wi-Fi</li>
+                            <li>Τηλεόραση επίπεδης οθόνης</li>
+                            <li>Ιδιωτικό μπάνιο με προϊόντα περιποίησης</li>
+                            <li>Στεγνωτήρας μαλλιών</li>
+                            <li>Χρηματοκιβώτιο</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Κάντε Κράτηση</a>
+                    </div>
+                    <div class="apartment-gallery">
+                        <img src="images/apartments/deluxe-studio-1.jpg" alt="Εσωτερικό Deluxe Studio">
+                        <div class="thumbnail-grid">
+                            <img src="images/apartments/deluxe-studio-2.jpg" alt="Κρεβάτι Deluxe Studio">
+                            <img src="images/apartments/deluxe-studio-3.jpg" alt="Κουζίνα Deluxe Studio">
+                            <img src="images/apartments/deluxe-studio-4.jpg" alt="Μπαλκόνι Deluxe Studio">
+                            <img src="images/apartments/deluxe-studio-5.jpg" alt="Μπάνιο Deluxe Studio">
+                            <img src="images/apartments/deluxe-studio-6.jpg" alt="Θέα από Deluxe Studio">
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Comparison Table -->
-        <section class="container comparison-table-section">
-            <h2 class="section-title">Σύγκριση Παροχών</h2>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Παροχή</th>
-                            <th>Deluxe Studio με Θέα Θάλασσα</th>
-                            <th>Superior Apartment Ενός Υπνοδωματίου</th>
-                            <th>Grand Suite με Ιδιωτικό Jacuzzi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Χωρητικότητα</td>
-                            <td>2 άτομα</td>
-                            <td>Έως 4 άτομα</td>
-                            <td>2-3 άτομα</td>
-                        </tr>
-                        <tr>
-                            <td>Μέγεθος (τ.μ.)</td>
-                            <td>35</td>
-                            <td>55</td>
-                            <td>65</td>
-                        </tr>
-                        <tr>
-                            <td>Κρεβάτι</td>
-                            <td>King-size</td>
-                            <td>1 Υ/Δ + Καναπές-κρεβάτι</td>
-                            <td>King-size</td>
-                        </tr>
-                        <tr>
-                            <td>Θέα Θάλασσα</td>
-                            <td>✔</td>
-                            <td>✔</td>
-                            <td>✔ (Πανοραμική)</td>
-                        </tr>
-                        <tr>
-                            <td>Ιδιωτικό Jacuzzi</td>
-                            <td>❌</td>
-                            <td>❌</td>
-                            <td>✔</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <section id="superior-apartment" class="apartment-type section-padding bg-light">
+            <div class="container">
+                <div class="apartment-details reverse-layout">
+                    <div class="apartment-text">
+                        <h2>Superior Apartment Ενός Υπνοδωματίου</h2>
+                        <p class="capacity-info">Για έως 4 άτομα | 40 τ.μ.</p>
+                        <p>Ιδανικό για οικογένειες ή μικρές παρέες, το Superior Apartment προσφέρει ξεχωριστό υπνοδωμάτιο και άνετο καθιστικό με καναπέ-κρεβάτι. Η πλήρως εξοπλισμένη κουζίνα σας δίνει την ευελιξία να ετοιμάζετε τα γεύματά σας, ενώ η μεγάλη βεράντα με έπιπλα εξωτερικού χώρου είναι ιδανική για χαλάρωση.</p>
+                        <h3>Παροχές:</h3>
+                        <ul class="amenities-list">
+                            <li>1 Υπνοδωμάτιο με King-size κρεβάτι</li>
+                            <li>Καθιστικό με καναπέ-κρεβάτι</li>
+                            <li>Πλήρως εξοπλισμένη κουζίνα (ψυγείο, εστίες, φούρνος μικροκυμάτων, μαγειρικά σκεύη)</li>
+                            <li>Μεγάλη βεράντα με έπιπλα εξωτερικού χώρου</li>
+                            <li>Κλιματισμός σε όλους τους χώρους</li>
+                            <li>Δωρεάν Wi-Fi</li>
+                            <li>Δύο τηλεοράσεις επίπεδης οθόνης</li>
+                            <li>Ιδιωτικό μπάνιο με προϊόντα περιποίησης</li>
+                            <li>Στεγνωτήρας μαλλιών</li>
+                            <li>Χρηματοκιβώτιο</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Κάντε Κράτηση</a>
+                    </div>
+                    <div class="apartment-gallery">
+                        <img src="images/apartments/superior-apartment-1.jpg" alt="Εσωτερικό Superior Apartment">
+                        <div class="thumbnail-grid">
+                            <img src="images/apartments/superior-apartment-2.jpg" alt="Υπνοδωμάτιο Superior Apartment">
+                            <img src="images/apartments/superior-apartment-3.jpg" alt="Καθιστικό Superior Apartment">
+                            <img src="images/apartments/superior-apartment-4.jpg" alt="Κουζίνα Superior Apartment">
+                            <img src="images/apartments/superior-apartment-5.jpg" alt="Βεράντα Superior Apartment">
+                            <img src="images/apartments/superior-apartment-6.jpg" alt="Θέα από Superior Apartment">
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-
-        <!-- Apartments Section -->
-        <div class="apartments-container container">
-            <!-- Deluxe Studio -->
-            <article class="apartment-entry" id="deluxe-studio">
-                <div class="apartment-gallery">
-                    <img src="https://placehold.co/800x533/F5F5DC/003C71?text=Deluxe+Studio+View" alt="Πανοραμική θέα στο Αιγαίο Πέλαγος από το Deluxe Studio">
+        <section id="grand-suite" class="apartment-type section-padding">
+            <div class="container">
+                <div class="apartment-details">
+                    <div class="apartment-text">
+                        <h2>Grand Suite με Ιδιωτικό Jacuzzi</h2>
+                        <p class="capacity-info">Για 2-3 άτομα | 65 τ.μ.</p>
+                        <p>Απολαύστε την απόλυτη πολυτέλεια στην Grand Suite μας. Αυτή η ευρύχωρη σουίτα προσφέρει premium ανέσεις, ξεχωριστό υπνοδωμάτιο, καθιστικό και μια εντυπωσιακή βεράντα με ιδιωτικό jacuzzi και πανοραμική θέα στο Αιγαίο Πέλαγος. Ιδανική για ζευγάρια που αναζητούν μια ρομαντική απόδραση ή για όσους επιθυμούν την απόλυτη χαλάρωση.</p>
+                        <h3>Παροχές:</h3>
+                        <ul class="amenities-list">
+                            <li>1 Υπνοδωμάτιο με King-size κρεβάτι</li>
+                            <li>Ευρύχωρο καθιστικό</li>
+                            <li>Premium ανέσεις</li>
+                            <li>Πλήρως εξοπλισμένη κουζίνα (ψυγείο, εστίες, φούρνος, καφετιέρα)</li>
+                            <li>Μεγάλη βεράντα με ιδιωτικό jacuzzi και θέα στη θάλασσα</li>
+                            <li>Κλιματισμός σε όλους τους χώρους</li>
+                            <li>Δωρεάν Wi-Fi υψηλής ταχύτητας</li>
+                            <li>Τηλεοράσεις Smart TV</li>
+                            <li>2 Μπάνια με προϊόντα περιποίησης πολυτελείας</li>
+                            <li>Μπουρνούζια και παντόφλες</li>
+                            <li>Στεγνωτήρας μαλλιών</li>
+                            <li>Χρηματοκιβώτιο</li>
+                            <li>Υπηρεσία καθημερινής καθαριότητας</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Κάντε Κράτηση</a>
+                    </div>
+                    <div class="apartment-gallery">
+                        <img src="images/apartments/grand-suite-1.jpg" alt="Εσωτερικό Grand Suite">
+                        <div class="thumbnail-grid">
+                            <img src="images/apartments/grand-suite-2.jpg" alt="Υπνοδωμάτιο Grand Suite">
+                            <img src="images/apartments/grand-suite-3.jpg" alt="Jacuzzi Grand Suite">
+                            <img src="images/apartments/grand-suite-4.jpg" alt="Θέα από Jacuzzi">
+                            <img src="images/apartments/grand-suite-5.jpg" alt="Σαλόνι Grand Suite">
+                            <img src="images/apartments/grand-suite-6.jpg" alt="Μπάνιο Grand Suite">
+                        </div>
+                    </div>
                 </div>
-                <div class="apartment-info">
-                    <h3>Deluxe Studio με Θέα Θάλασσα</h3>
-                    <p class="specs">Για 2 άτομα | 35 τ.μ. | King-size κρεβάτι | Κουζινάκι | Μπαλκόνι</p>
-                    <p>Ένας κομψός και μοντέρνος χώρος, ιδανικός για ζευγάρια που αναζητούν μια ρομαντική απόδραση. Το ιδιωτικό μπαλκόνι προσφέρει μαγευτική θέα στη θάλασσα, δημιουργώντας το τέλειο σκηνικό για χαλάρωση.</p>
-                    <h4>Παροχές:</h4>
-                    <ul class="amenities-list">
-                        <li>Πλήρως εξοπλισμένο κουζινάκι</li>
-                        <li>Μπάνιο με walk-in ντουζιέρα</li>
-                        <li>Smart TV 4K & Δωρεάν Wi-Fi</li>
-                        <li>Αυτόνομος Κλιματισμός</li>
-                        <li>Επιπλωμένο μπαλκόνι</li>
-                    </ul>
-                    <a href="contact.html#booking-form" class="btn">Κάντε Κράτηση</a>
-                </div>
-            </article>
-
-            <!-- Superior Apartment -->
-            <article class="apartment-entry" id="superior-apartment">
-                <div class="apartment-gallery">
-                    <img src="https://placehold.co/800x533/F5F5DC/003C71?text=Superior+Apartment+Living" alt="Ευρύχωρο καθιστικό του Superior Apartment με μοντέρνα επίπλωση">
-                </div>
-                <div class="apartment-info">
-                    <h3>Superior Apartment Ενός Υπνοδωματίου</h3>
-                    <p class="specs">Για έως 4 άτομα | 55 τ.μ. | 1 Υπνοδωμάτιο | Καθιστικό | Πλήρως εξοπλισμένη κουζίνα</p>
-                    <p>Ευρύχωρο και λειτουργικό, το Superior Apartment είναι η ιδανική επιλογή για οικογένειες ή μικρές παρέες. Διαθέτει ξεχωριστό υπνοδωμάτιο για ιδιωτικότητα και ένα άνετο καθιστικό με καναπέ-κρεβάτι.</p>
-                    <h4>Παροχές:</h4>
-                    <ul class="amenities-list">
-                        <li>Πλήρως εξοπλισμένη κουζίνα με φούρνο</li>
-                        <li>Ξεχωριστό υπνοδωμάτιο</li>
-                        <li>Μπάνιο με walk-in ντουζιέρα & επώνυμα προϊόντα</li>
-                        <li>Smart TV 4K & Δωρεάν Wi-Fi</li>
-                        <li>Μεγάλο επιπλωμένο μπαλκόνι</li>
-                    </ul>
-                    <a href="contact.html#booking-form" class="btn">Κάντε Κράτηση</a>
-                </div>
-            </article>
-
-            <!-- Grand Suite -->
-            <article class="apartment-entry" id="grand-suite">
-                <div class="apartment-gallery">
-                    <img src="https://placehold.co/800x533/F5F5DC/003C71?text=Grand+Suite+Jacuzzi" alt="Μεγάλη βεράντα με ιδιωτικό jacuzzi και πανοραμική θέα στη θάλασσα">
-                </div>
-                <div class="apartment-info">
-                    <h3>Grand Suite με Ιδιωτικό Jacuzzi</h3>
-                    <p class="specs">Για 2-3 άτομα | 65 τ.μ. | Premium ανέσεις | Μεγάλη βεράντα με jacuzzi</p>
-                    <p>Η απόλυτη εμπειρία πολυτέλειας. Η Grand Suite προσφέρει έναν εξαιρετικά άνετο χώρο με premium ανέσεις και μια εκπληκτική, μεγάλη βεράντα με ιδιωτικό jacuzzi και πανοραμική θέα στο απέραντο γαλάζιο του Αιγαίου.</p>
-                    <h4>Παροχές:</h4>
-                    <ul class="amenities-list">
-                        <li>Ιδιωτικό εξωτερικό Jacuzzi</li>
-                        <li>Καφετιέρα Nespresso</li>
-                        <li>Μπουρνούζια & Παντόφλες</li>
-                        <li>Smart TV 4K & Δωρεάν Wi-Fi</li>
-                        <li>Μεγάλη επιπλωμένη βεράντα</li>
-                    </ul>
-                    <a href="contact.html#booking-form" class="btn">Κάντε Κράτηση</a>
-                </div>
-            </article>
-        </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer -->
-    <footer>
+    <footer class="main-footer">
         <div class="container">
-            <div class="footer-grid">
-                 <div class="footer-col">
-                    <a href="index.html" class="logo">Diamante del mar</a>
-                    <p>Η πολυτέλεια συναντά το Αιγαίο στην καρδιά της Κω.</p>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo/diamante-logo.png" alt="Diamante del mar Logo">
                 </div>
-                <div class="footer-col">
-                    <h4>Γρήγοροι Σύνδεσμοι</h4>
+                <div class="footer-contact">
+                    <h4>Επικοινωνία</h4>
+                    <p>Διεύθυνση: Οδός Αιγαίου 10, Κως 85300, Ελλάδα</p>
+                    <p>Τηλέφωνο: +30 22420 12345</p>
+                    <p>Email: info@diamantedelmar.gr</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Σελίδες</h4>
                     <ul>
                         <li><a href="index.html">Αρχική</a></li>
                         <li><a href="apartments.html">Διαμερίσματα</a></li>
@@ -171,22 +174,14 @@
                         <li><a href="contact.html">Επικοινωνία</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h4>Επικοινωνία</h4>
-                    <p>Οδός Αιγαίου, Λάμπη<br>Κως, 85300, Ελλάδα</p>
-                    <p>Τηλ: <a href="tel:+302242012345">+30 22420 12345</a></p>
-                    <p>Email: <a href="mailto:info@diamantedelmar-kos.gr">info@diamantedelmar-kos.gr</a></p>
-                </div>
-                <div class="footer-col">
+                <div class="footer-social">
                     <h4>Ακολουθήστε μας</h4>
-                    <div class="social-icons">
-                         <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-                         <a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-                    </div>
+                    <a href="#" target="_blank"><img src="images/general/icon-facebook.png" alt="Facebook"></a>
+                    <a href="#" target="_blank"><img src="images/general/icon-instagram.png" alt="Instagram"></a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Diamante del mar Aegean Signature Suites. All Rights Reserved.</p>
+                <p>&copy; 2025 Diamante del mar Apartments. Με επιφύλαξη παντός δικαιώματος.</p>
             </div>
         </div>
     </footer>
