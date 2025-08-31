@@ -1,155 +1,212 @@
 <!DOCTYPE html>
-<html lang="el">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diamante del mar | Πολυτελή Διαμερίσματα στην Κω</title>
-    <meta name="description" content="Ανακαλύψτε τα Diamante del mar Apartments, την όαση πολυτέλειας και ηρεμίας στην καρδιά της Κω. Μοντέρνα διαμερίσματα κοντά στη θάλασσα.">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+
+    <!-- SEO Meta Tags -->
+    <title>Diamante del Mar | Coming Soon - Luxury Aegean Suites</title>
+    <meta name="description" content="Experience the pinnacle of luxury at Diamante del Mar. Our exclusive Aegean Signature Suites are coming soon. A new jewel in the Aegean is being polished. Contact us for pre-opening inquiries and special offers.">
+    <meta name="keywords" content="luxury suites, Aegean Sea, Lambi Beach, Kos hotels, luxury hotels, Diamante del Mar, signature suites, luxury accommodation Greece, new hotel, luxury travel">
+    <meta name="author" content="Diamante del Mar">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.diamantedelmar.gr/">
+    <meta property="og:title" content="Diamante del Mar | Coming Soon - Luxury Aegean Suites">
+    <meta property="og:description" content="A new jewel in the Aegean is being polished. Discover Diamante del Mar, a collection of signature suites offering unparalleled luxury and breathtaking sea views from Lambi Beach.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1629284347518-b575205b38a7?q=80&w=2070&auto=format&fit=crop">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.diamantedelmar.gr/">
+    <meta property="twitter:title" content="Diamante del Mar | Coming Soon - Luxury Aegean Suites">
+    <meta property="twitter:description" content="A new jewel in the Aegean is being polished. Discover Diamante del Mar, a collection of signature suites offering unparalleled luxury and breathtaking sea views from Lambi Beach.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1629284347518-b575205b38a7?q=80&w=2070&auto=format&fit=crop">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://placehold.co/32x32/003366/FFFFFF?text=DM" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            overflow: hidden; /* Prevents scrollbars from flashing during load */
+        }
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        .bg-image {
+            background-image: url('https://images.unsplash.com/photo-1629284347518-b575205b38a7?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .backdrop-blur-sm {
+             backdrop-filter: blur(4px);
+        }
+        .fade-in {
+            animation: fadeInAnimation 2s ease-in-out forwards;
+            opacity: 0;
+        }
+        @keyframes fadeInAnimation {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .form-input {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        .form-input:focus {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.8);
+            outline: none;
+        }
+        .submit-button {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+
+    <!-- JSON-LD Schema for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LodgingBusiness",
+      "name": "Diamante del Mar Aegean Signature Suites",
+      "description": "An exclusive collection of luxury signature suites on Lambi Beach, offering unparalleled comfort and breathtaking sea views.",
+      "image": "https://images.unsplash.com/photo-1629284347518-b575205b38a7?q=80&w=2070&auto=format&fit=crop",
+      "telephone": "+30-XXX-XXX-XXXX",
+      "url": "https://www.diamantedelmar.gr/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lambi Beach",
+        "addressLocality": "Kos",
+        "addressRegion": "Dodecanese",
+        "postalCode": "85300",
+        "addressCountry": "GR"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "validFrom": "2025-10-01"
+      },
+      "priceRange": "$$$$"
+    }
+    </script>
 </head>
-<body>
-    <header class="main-header">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo/diamante-logo.png" alt="Diamante del mar Logo">
-                </a>
-            </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html" class="active">Αρχική</a></li>
-                    <li><a href="apartments.html">Διαμερίσματα</a></li>
-                    <li><a href="gallery.html">Συλλογή</a></li>
-                    <li><a href="location.html">Τοποθεσία</a></li>
-                    <li><a href="contact.html">Επικοινωνία</a></li>
-                </ul>
-            </nav>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </header>
+<body class="bg-image text-white">
 
-    <main>
-        <section class="hero-section">
-            <div class="hero-content">
-                <h1>Diamante del mar: Η Πολυτέλεια Συναντά το Αιγαίο</h1>
-                <p>Ανακαλύψτε την όαση ηρεμίας σας στην καρδιά της Κω.</p>
-                <a href="apartments.html" class="btn btn-primary">Δείτε τα Διαμερίσματα</a>
-            </div>
-        </section>
+    <!-- Main Container -->
+    <div class="relative min-h-screen flex items-center justify-center p-4 bg-black bg-opacity-50">
+        
+        <div class="absolute inset-0 backdrop-blur-sm"></div>
 
-        <section class="introduction-section section-padding">
-            <div class="container text-center">
-                <h2>Καλώς ήρθατε στο Diamante del mar</h2>
-                <p>Στα Diamante del mar Apartments, πιστεύουμε ότι οι διακοπές σας στην Κω πρέπει να είναι μια εμπειρία απόλυτης χαλάρωσης και πολυτέλειας. Σχεδιασμένα με μοντέρνα αισθητική και μόλις λίγα βήματα από την καταγάλανη θάλασσα, τα διαμερίσματά μας προσφέρουν το ιδανικό καταφύγιο για ζευγάρια και οικογένειες που αναζητούν άνεση, ηρεμία και αυθεντική ελληνική φιλοξενία.</p>
-            </div>
-        </section>
+        <main class="relative z-10 text-center max-w-3xl w-full mx-auto fade-in">
+            
+            <div class="bg-black bg-opacity-60 backdrop-blur-md rounded-xl shadow-2xl p-8 md:p-12 border border-white/20">
+                
+                <h2 class="font-playfair text-lg md:text-xl tracking-widest uppercase text-white/80 mb-2">
+                    Diamante del Mar
+                </h2>
+                
+                <h1 class="font-playfair font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-shadow-lg">
+                    Aegean Signature Suites
+                </h1>
 
-        <section class="features-section section-padding bg-light">
-            <div class="container">
-                <div class="feature-grid">
-                    <div class="feature-item">
-                        <img src="images/general/feature-icon-location.png" alt="Εικονίδιο Τοποθεσίας">
-                        <h3>Μοναδική Τοποθεσία</h3>
-                        <p>Σε προνομιακή θέση, προσφέροντας εύκολη πρόσβαση στην παραλία και τα αξιοθέατα της Κω.</p>
-                    </div>
-                    <div class="feature-item">
-                        <img src="images/general/feature-icon-comfort.png" alt="Εικονίδιο Άνεσης">
-                        <h3>Απόλυτη Άνεση</h3>
-                        <p>Πλήρως εξοπλισμένα διαμερίσματα με όλες τις σύγχρονες ανέσεις για μια ξέγνοιαστη διαμονή.</p>
-                    </div>
-                    <div class="feature-item">
-                        <img src="images/general/feature-icon-hospitality.png" alt="Εικονίδιο Φιλοξενίας">
-                        <h3>Αυθεντική Φιλοξενία</h3>
-                        <p>Ζήστε την ελληνική φιλοξενία μέσα από την άψογη εξυπηρέτηση και το φιλικό μας προσωπικό.</p>
-                    </div>
+                <p class="mt-6 text-lg md:text-xl max-w-2xl mx-auto text-white/90">
+                    A new jewel of the Aegean is being polished. Our exclusive collection of signature suites will soon offer an escape of unparalleled luxury and breathtaking sea views.
+                </p>
+                
+                <p class="mt-4 text-lg md:text-xl font-bold text-white/90">
+                    Our full website is launching soon.
+                </p>
+
+                <!-- Countdown Timer -->
+                <div id="countdown" class="flex justify-center space-x-4 md:space-x-8 my-8 text-2xl md:text-4xl font-playfair">
+                    <div><span id="days"></span><div class="text-sm font-sans font-light tracking-wider">Days</div></div>
+                    <div><span id="hours"></span><div class="text-sm font-sans font-light tracking-wider">Hours</div></div>
+                    <div><span id="minutes"></span><div class="text-sm font-sans font-light tracking-wider">Minutes</div></div>
+                    <div><span id="seconds"></span><div class="text-sm font-sans font-light tracking-wider">Seconds</div></div>
+                </div>
+
+                <!-- Inquiry Form -->
+                <div class="mt-10">
+                    <h3 class="text-xl md:text-2xl font-playfair mb-4">Inquire for Exclusive Pre-Opening Offers</h3>
+                    <form id="inquiryForm" class="max-w-xl mx-auto" action="mailto:sales@diamantedelmar.gr" method="post" enctype="text/plain">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <input type="text" name="Name" placeholder="Your Name" class="form-input w-full p-3 rounded-md text-white placeholder-white/70 focus:ring-2 focus:ring-white/50" required>
+                            <input type="email" name="Email" placeholder="Your Email" class="form-input w-full p-3 rounded-md text-white placeholder-white/70 focus:ring-2 focus:ring-white/50" required>
+                        </div>
+                        <div class="mt-4">
+                            <textarea name="Message" placeholder="Your question or inquiry..." rows="4" class="form-input w-full p-3 rounded-md text-white placeholder-white/70 focus:ring-2 focus:ring-white/50" required></textarea>
+                        </div>
+                        <div class="mt-6">
+                            <button type="submit" class="submit-button w-full md:w-auto bg-white text-gray-900 font-bold py-3 px-10 rounded-md hover:bg-gray-200 hover:scale-105 transform shadow-lg">
+                                Submit Inquiry
+                            </button>
+                        </div>
+                         <p class="text-xs mt-4 text-white/50">
+                            By submitting, you will be prompted to send your inquiry via your default email client.
+                        </p>
+                    </form>
                 </div>
             </div>
-        </section>
+        </main>
+    </div>
 
-        <section class="apartment-preview section-padding">
-            <div class="container">
-                <h2 class="text-center">Τα Διαμερίσματά Μας</h2>
-                <div class="apartment-preview-grid">
-                    <div class="apartment-card">
-                        <img src="images/apartments/deluxe-studio-preview.jpg" alt="Deluxe Studio με ιδιωτικό μπαλκόνι">
-                        <h3>Deluxe Studio</h3>
-                        <p>Ιδανικό για ζευγάρια, με μοντέρνο design και ιδιωτικό μπαλκόνι.</p>
-                        <a href="apartments.html#deluxe-studio" class="btn btn-secondary">Περισσότερα</a>
-                    </div>
-                    <div class="apartment-card">
-                        <img src="images/apartments/superior-apartment-preview.jpg" alt="Superior Apartment Ενός Υπνοδωματίου">
-                        <h3>Superior Apartment</h3>
-                        <p>Άνετο και ευρύχωρο, ιδανικό για οικογένειες ή παρέες έως 4 ατόμων.</p>
-                        <a href="apartments.html#superior-apartment" class="btn btn-secondary">Περισσότερα</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <script>
+        // --- Countdown Timer Script ---
+        // Set the date we're counting down to
+        const countDownDate = new Date("Oct 1, 2025 00:00:00").getTime();
 
-        <section class="testimonials-section section-padding bg-light">
-            <div class="container">
-                <h2 class="text-center">Τι Λένε οι Επισκέπτες μας</h2>
-                <div class="testimonial-slider">
-                    <div class="testimonial-item">
-                        <p>"Εκπληκτικά διαμερίσματα! Η διακόσμηση ήταν υπέροχη, πεντακάθαρα και η θέα από το μπαλκόνι μαγευτική. Θα ξαναέρθουμε σίγουρα!"</p>
-                        <h4>- Μαρία Π.</h4>
-                        <span>Αθήνα, Ελλάδα</span>
-                    </div>
-                    <div class="testimonial-item">
-                        <p>"Η διαμονή μας στο Diamante del mar ήταν αξέχαστη. Το προσωπικό ήταν εξυπηρετικότατο και η τοποθεσία ιδανική για να εξερευνήσουμε την Κω. Το συστήνω ανεπιφύλακτα!"</p>
-                        <h4>- David S.</h4>
-                        <span>Λονδίνο, Ηνωμένο Βασίλειο</span>
-                    </div>
-                    <div class="testimonial-item">
-                        <p>"Πραγματικά διαμάντι! Νιώσαμε σαν στο σπίτι μας, αλλά με την πολυτέλεια ενός ξενοδοχείου. Το jacuzzi ήταν το highlight! Ευχαριστούμε για όλα."</p>
-                        <h4>- Σοφία Κ.</h4>
-                        <span>Θεσσαλονίκη, Ελλάδα</span>
-                    </div>
-                </div>
-                <div class="slider-dots"></div>
-            </div>
-        </section>
-    </main>
+        // Update the count down every 1 second
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
 
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="images/logo/diamante-logo.png" alt="Diamante del mar Logo">
-                </div>
-                <div class="footer-contact">
-                    <h4>Επικοινωνία</h4>
-                    <p>Διεύθυνση: Οδός Αιγαίου 10, Κως 85300, Ελλάδα</p>
-                    <p>Τηλέφωνο: +30 22420 12345</p>
-                    <p>Email: info@diamantedelmar.gr</p>
-                </div>
-                <div class="footer-nav">
-                    <h4>Σελίδες</h4>
-                    <ul>
-                        <li><a href="index.html">Αρχική</a></li>
-                        <li><a href="apartments.html">Διαμερίσματα</a></li>
-                        <li><a href="gallery.html">Συλλογή</a></li>
-                        <li><a href="location.html">Τοποθεσία</a></li>
-                        <li><a href="contact.html">Επικοινωνία</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <h4>Ακολουθήστε μας</h4>
-                    <a href="#" target="_blank"><img src="images/general/icon-facebook.png" alt="Facebook"></a>
-                    <a href="#" target="_blank"><img src="images/general/icon-instagram.png" alt="Instagram"></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Diamante del mar Apartments. Με επιφύλαξη παντός δικαιώματος.</p>
-            </div>
-        </div>
-    </footer>
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    <script src="js/main.js"></script>
+            // Display the result in the respective elements
+            document.getElementById("days").innerHTML = days < 10 ? '0' + days : days;
+            document.getElementById("hours").innerHTML = hours < 10 ? '0' + hours : hours;
+            document.getElementById("minutes").innerHTML = minutes < 10 ? '0' + minutes : minutes;
+            document.getElementById("seconds").innerHTML = seconds < 10 ? '0' + seconds : seconds;
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "<div class='text-2xl md:text-4xl font-playfair'>We are now open!</div>";
+            }
+        }, 1000);
+
+        // --- Form Submission Handler ---
+        // The mailto: action handles this natively, but we can prevent default
+        // to show a confirmation message if needed in the future.
+        // For now, the default behavior is sufficient and requires no JS.
+        document.getElementById('inquiryForm').addEventListener('submit', function(e) {
+            // This is just to confirm in the console.
+            // The mailto action will proceed as normal.
+            console.log('Form submitted. Opening email client...');
+        });
+        
+        // --- Ensure body is scrollable after load animation ---
+        window.onload = function() {
+            document.body.style.overflow = 'auto';
+        }
+
+    </script>
 </body>
 </html>
