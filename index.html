@@ -7,16 +7,57 @@
     <meta name="description" content="Choose from 6 premium, newly renovated apartments at Diamante Del Mar. Just 200m from Lambi Beach, Kos. Modern design, Aegean views, and Greek hospitality.">
     <style>
         :root { --blue: #0077b6; --gold: #c5a059; --dark: #2c3e50; --light: #f8f9fa; }
-        body { font-family: 'Helvetica Neue', sans-serif; margin: 0; color: var(--dark); line-height: 1.6; }
+        body { font-family: 'Helvetica Neue', sans-serif; margin: 0; color: var(--dark); line-height: 1.6; background-color: #fafafa; }
         nav { display: flex; justify-content: space-between; padding: 20px 5%; background: white; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; }
-        .hero { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('hero-kos.jpg') center/cover; height: 60vh; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
+        
+        /* New Header Styling */
+        header { text-align: center; padding: 50px 20px 20px; background: white; }
+        header h1 { color: var(--blue); font-size: 2.8rem; margin: 0 0 10px 0; }
+        header p { font-size: 1.3rem; color: #666; margin: 0; }
+
+        /* The CSS Grid Collage */
+        .hero-collage {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 250px 250px;
+            gap: 15px;
+            padding: 20px 5%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .collage-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Keeps images from stretching */
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+        .collage-img:hover {
+            transform: scale(1.02); /* Slight zoom effect when hovered */
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        
+        /* Making one image the "Hero" large image on the left */
+        .img-large { grid-column: span 2; grid-row: span 2; } 
+        .img-small { grid-column: span 1; grid-row: span 1; }
+
+        /* Mobile adjustments for the collage */
+        @media (max-width: 768px) {
+            .hero-collage {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: 200px 150px 150px;
+            }
+            .img-large { grid-column: span 2; grid-row: span 1; }
+        }
+
+        /* Apartment Grid */
         .container { max-width: 1200px; margin: auto; padding: 50px 20px; }
         .apartment-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .card { border: 1px solid #ddd; border-radius: 10px; overflow: hidden; transition: 0.3s; background: white; }
         .card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        .card img { width: 100%; height: 200px; object-fit: cover; }
-        .card-content { padding: 20px; }
-        .btn { background: var(--blue); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; }
+        .card-content { padding: 25px; text-align: center; }
+        .btn { background: var(--blue); color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; display: inline-block; font-weight: bold; margin-top: 15px; }
+        
         footer { background: var(--dark); color: white; padding: 40px; text-align: center; margin-top: 50px; }
     </style>
 </head>
@@ -25,58 +66,64 @@
 <nav>
     <div style="font-weight: bold; font-size: 1.4rem; color: var(--blue);">DIAMANTE DEL MAR</div>
     <div>
-        <a href="#collection" style="text-decoration:none; color:var(--dark);">Our Collection</a>
+        <a href="#collection" style="text-decoration:none; color:var(--dark); font-weight: bold;">Our Collection</a>
     </div>
 </nav>
 
-<section class="hero">
-    <div>
-        <h1>Seafront Living in Kos Town</h1>
-        <p>6 Designer Apartments | 200m from Lambi Beach</p>
-    </div>
+<header>
+    <h1>Seafront Living in Kos Town</h1>
+    <p>6 Designer Apartments | 200m from Lambi Beach</p>
+</header>
+
+<section class="hero-collage">
+    <img src="https://placehold.co/800x600?text=Kos+Apartment" alt="Kos Apartment Turquoise and Marble Design" class="collage-img img-large">
+    <img src="https://placehold.co/400x300?text=Erato+Swing" alt="Erato Apartment Balcony Swing" class="collage-img img-small">
+    <img src="https://placehold.co/400x300?text=Phaedra+Bedroom" alt="Phaedra Apartment Soft Mattresses" class="collage-img img-small">
+    <img src="https://placehold.co/400x300?text=Crete+Terrace" alt="Crete Apartment Blue Atmosphere" class="collage-img img-small">
+    <img src="https://placehold.co/400x300?text=Rhodes+Living+Room" alt="Rhodes Apartment Minimalist View" class="collage-img img-small">
 </section>
 
 <div class="container" id="collection">
-    <h2 style="text-align: center; margin-bottom: 40px;">The Diamante Collection</h2>
+    <h2 style="text-align: center; margin-bottom: 40px; font-size: 2rem;">The Diamante Collection</h2>
     <div class="apartment-grid">
         <div class="card">
             <div class="card-content">
-                <h3>Phaedra</h3>
+                <h3 style="margin-top: 0;">Phaedra</h3>
                 <p>33m² | Modern Elegance | 1 Bedroom</p>
                 <a href="phaedra.html" class="btn">View Details</a>
             </div>
         </div>
         <div class="card">
             <div class="card-content">
-                <h3>Rhodes</h3>
+                <h3 style="margin-top: 0;">Rhodes</h3>
                 <p>Modern & Minimal | City & Sea Views</p>
                 <a href="rhodes.html" class="btn">View Details</a>
             </div>
         </div>
         <div class="card">
             <div class="card-content">
-                <h3>Crete (Kriti)</h3>
+                <h3 style="margin-top: 0;">Crete (Kriti)</h3>
                 <p>40m² | Sea-Atmosphere Blue Design</p>
                 <a href="crete.html" class="btn">View Details</a>
             </div>
         </div>
         <div class="card">
             <div class="card-content">
-                <h3>Kos (Diamond of the Sea)</h3>
+                <h3 style="margin-top: 0;">Kos (Diamond of the Sea)</h3>
                 <p>31m² | Marble Details & Turquoise Accents</p>
                 <a href="kos-studio.html" class="btn">View Details</a>
             </div>
         </div>
         <div class="card">
             <div class="card-content">
-                <h3>Erato</h3>
+                <h3 style="margin-top: 0;">Erato</h3>
                 <p>Garden-Style Balcony with Hanging Swing</p>
                 <a href="erato.html" class="btn">View Details</a>
             </div>
         </div>
         <div class="card">
             <div class="card-content">
-                <h3>Thalia</h3>
+                <h3 style="margin-top: 0;">Thalia</h3>
                 <p>Natural Stone & Floral Harmony</p>
                 <a href="thalia.html" class="btn">View Details</a>
             </div>
