@@ -133,7 +133,238 @@
         </div>
     </div>
 </div>
+<style>
+    .direct-booking-benefits {
+        background-color: white;
+        padding: 60px 5%;
+        margin-top: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+    .benefit-card {
+        background: #fdfdfd;
+        border: 1px solid #eee;
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s ease;
+    }
+    .benefit-card:hover {
+        border-color: #0077b6; /* Your brand blue */
+        transform: translateY(-5px);
+    }
+    .benefit-icon {
+        font-size: 2.5rem;
+        color: #c5a059; /* Your brand gold/beige accent */
+        margin-bottom: 20px;
+    }
+    .benefit-card h3 {
+        color: #2c3e50;
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+    }
+    .benefit-card p {
+        color: #666;
+        font-size: 0.95rem;
+    }
+</style>
 
+<section class="container direct-booking-benefits">
+    <div style="text-align: center;">
+        <span style="color: #c5a059; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;">Exclusivity</span>
+        <h2 style="font-size: 2.2rem; margin-top: 10px; color: #2c3e50;">Book Direct with Us & Enjoy Premium Privileges</h2>
+        <p style="max-width: 600px; margin: 20px auto; color: #666;">Experience the Diamante advantage. We guarantee the absolute best rate and exclusive benefits when you secure your stay directly with us.</p>
+    </div>
+
+    <div class="benefits-grid">
+        <div class="benefit-card">
+            <div class="benefit-icon">🏷️</div>
+            <h3>Best Price Guaranteed</h3>
+            <p>Save on platform fees. Booking directly ensures you get the absolute lowest rate available.</p>
+        </div>
+        <div class="benefit-card">
+            <div class="benefit-icon">🔄</div>
+            <h3>Flexible Cancellations</h3>
+            <p>Enjoy more flexible cancellation policies and change options compared to OTA platforms.</p>
+        </div>
+        <div class="benefit-card">
+            <div class="benefit-icon">📞</div>
+            <h3>Direct Communication</h3>
+            <p>Connect directly with us for personalized requests and immediate concierge support.</p>
+        </div>
+        <div class="benefit-card">
+            <div class="benefit-icon">🎁</div>
+            <h3>Exclusive Perks</h3>
+            <p>Receive complimentary perks like early check-in or late check-out (subject to availability).</p>
+        </div>
+    </div>
+</section>
+    <style>
+    .guest-testimonials {
+        background-color: #f9f9f9; /* Slight grey background to separate from white sections */
+        padding: 80px 5%;
+        margin-top: 50px;
+        text-align: center;
+    }
+    .badge-container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 50px;
+        align-items: center;
+    }
+    .review-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: auto;
+    }
+    .review-card {
+        background: white;
+        padding: 40px;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        position: relative;
+    }
+    .review-card::before {
+        content: '"';
+        font-size: 5rem;
+        color: #e0e0e0;
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        font-family: serif;
+    }
+    .review-text {
+        font-style: italic;
+        color: #444;
+        margin-bottom: 20px;
+        line-height: 1.7;
+    }
+    .review-author {
+        font-weight: bold;
+        color: #2c3e50;
+    }
+</style>
+
+<section class="guest-testimonials">
+    <div class="container">
+        <div class="badge-container">
+            <img src="airbnb-badge.png" alt="Airbnb Superhost and Guest Favorite Badges" style="max-height: 80px; width: auto;">
+            <div style="text-align: left;">
+                <div style="font-size: 2.5rem; font-weight: bold; color: #2c3e50;">5.0 / 5</div>
+                <div style="color: #666;">Rated by our guests on Airbnb</div>
+            </div>
+        </div>
+
+        <h2 style="font-size: 2.2rem; margin-bottom: 50px; color: #2c3e50;">What Our Guests Are Saying</h2>
+
+        <div class="review-grid">
+            <div class="review-card">
+                <p class="review-text">The Phaedra suite was so comfortable! The rich, soft mattresses are exactly what we needed. Just 200m to Lambi beach. We will be back!</p>
+                <p class="review-author">— Maria, Greece</p>
+            </div>
+            <div class="review-card">
+                <p class="review-text">Thalia is a true gem. Loved the natural stone decor and the King Size bed. Perfect location close to everything but in a quiet neighborhood.</p>
+                <p class="review-author">— John, UK</p>
+            </div>
+            <div class="review-card">
+                <p class="review-text">The turquoise accents and marble details in the Kos studio are stunning. It felt luxurious and was an easy walk into Kos Town center.</p>
+                <p class="review-author">— Sarah, Germany</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <style>
+    .prime-location {
+        padding: 60px 5%;
+        background-color: white;
+        margin-top: 50px;
+        border-radius: 12px;
+        border: 1px solid #eee;
+    }
+    .location-list {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        margin-top: 40px;
+    }
+    .location-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+        background: #fdfdfd;
+        border-radius: 8px;
+    }
+    .location-icon {
+        font-size: 1.5rem;
+    }
+    .landmark-name {
+        font-weight: bold;
+        color: #2c3e50;
+    }
+    .landmark-dist {
+        color: #666;
+        font-size: 0.9rem;
+    }
+</style>
+
+<section class="container prime-location" id="location">
+    <div style="text-align: center;">
+        <span style="color: #c5a059; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;">Location</span>
+        <h2 style="font-size: 2.2rem; margin-top: 10px; color: #2c3e50;">Perfectly Positioned in Kos Town</h2>
+        <p style="max-width: 600px; margin: 20px auto; color: #666;">Diamante Del Mar offers a unique blend of beachfront tranquility and urban convenience.</p>
+    </div>
+
+    <ul class="location-list">
+        <li class="location-item">
+            <span class="location-icon">🏖️</span>
+            <div>
+                <div class="landmark-name">Lambi Beach</div>
+                <div class="landmark-dist">3-Minute Walk (200m)</div>
+            </div>
+        </li>
+        <li class="location-item">
+            <span class="location-icon">🌊</span>
+            <div>
+                <div class="landmark-name">Akti Zouroudi</div>
+                <div class="landmark-dist">5-Minute Walk</div>
+            </div>
+        </li>
+        <li class="location-item">
+            <span class="location-icon">⚓</span>
+            <div>
+                <div class="landmark-name">Kos Town Port</div>
+                <div class="landmark-dist">15-Minute Walk (1.1km)</div>
+            </div>
+        </li>
+        <li class="location-item">
+            <span class="location-icon">🏛️</span>
+            <div>
+                <div class="landmark-name">Ancient Agora</div>
+                <div class="landmark-dist">18-Minute Walk (1.3km)</div>
+            </div>
+        </li>
+        <li class="location-item">
+            <span class="location-icon">✈️</span>
+            <div>
+                <div class="landmark-name">Kos Airport (KGS)</div>
+                <div class="landmark-dist">30-Minute Drive (24km)</div>
+            </div>
+        </li>
+    </ul>
+</section>
+    
 <footer>
     <p>&copy; 2026 Diamante Del Mar - Kos Island, Greece</p>
     <p>200m from Lambi Beach | 1.1km from Kos Port</p>
