@@ -1,0 +1,37 @@
+/*
+This file is for any minor custom CSS that is difficult or verbose to achieve with Tailwind CSS utility classes.
+For this project, it's kept minimal as Tailwind handles most of the styling.
+*/
+
+/* Smooth scroll behavior for the entire site */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom transition for elements */
+.transition-all-300 {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Styling for the active thumbnail in the apartment gallery */
+.gallery-thumbnails .border-amber-500 {
+    border-width: 2px;
+    border-color: #f59e0b; /* Tailwind's amber-500 */
+}
+
+/* A prose-based override for better link styling within articles */
+.prose a {
+    color: #c2410c; /* Tailwind's orange-600 for a nice contrast */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.prose a:hover {
+    text-decoration: underline;
+}
+
+/* While JS could be used for the sticky card, modern CSS is more efficient.
+  Tailwind provides `sticky` and `top-*` classes which are used directly in the HTML.
+  This ensures the booking card on apartment pages scrolls with the user until its container ends.
+  No extra CSS is needed here because it's handled by Tailwind classes like `sticky top-28`.
+*/
