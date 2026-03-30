@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Diamante Del Mar | Aegean Signature Suites Kos | 200m from Lambi Beach</title>
-    <meta name="description" content="Choose from 6 premium, newly renovated Aegean Signature Suites at Diamante Del Mar. Just 200m from Lambi Beach, Kos. Modern luxury, quiet environment, and Greek hospitality. Book Direct.">
-    <meta name="keywords" content="Diamante Del Mar Kos, luxury suites Lambi Beach, signature suites Kos Town, potable water Kos, check-in Diamante Del Mar">
+    <meta name="description" content="Choose from 6 premium, newly renovated Aegean Signature Suites at Diamante Del Mar. Just 200m from Lambi Beach, Kos. Modern design, quiet environment, and Greek hospitality. Book Direct.">
+    <meta name="keywords" content="Diamante Del Mar Kos, luxury suites Lambi Beach, signature suites Kos Town, potable water Kos, check-in Diamante Del Mar, kos romantic stay">
     <link rel="canonical" href="https://diamantedelmar.gr/">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,15 +23,15 @@
           "name": "Is the tap water safe to drink (potable)?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, the tap water within all suites at Diamante Del Mar is potable and completely safe for consumption. We encourage guests to drink tap water to reduce plastic use."
+            "text": "Yes, the tap water within all suites at Diamante Del Mar is potable and completely safe for consumption. We encourage guests to drink tap water to reduce plastic waste on Kos island."
           }
         },
         {
           "@type": "Question",
-          "name": "Why isn't my air conditioning working?",
+          "name": "Why isn't the air conditioning working?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Every renovated suite features independent A/C. For optimal performance, all doors, balcony doors, and windows must be tightly closed. A sensor automatically deactivates the system if an open door is detected."
+            "text": "Every renovated suite features independent climate control. For optimal performance, all doors, balcony doors, and windows must be tightly closed. A sensor automatically deactivates the system if an open door is detected to maintain the ideal climate."
           }
         },
         {
@@ -47,7 +47,7 @@
           "name": "How far are you from Lambi Beach and Kos Town center?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Phaedra's location is ideal. Diamante Del Mar is just 200 meters—approximately a 3-minute walk—from the renowned Lambi Beach and a short 1.1km walk from Kos Harbor and the historic center."
+            "text": "Phaedra’s location is ideal. Diamante Del Mar is just 200 meters—approximately a 3-minute walk—from the renowned Lambi Beach and a short 1.1km walk from Kos Harbor and the historic center."
           }
         },
         {
@@ -55,7 +55,7 @@
           "name": "What are the check-in and check-out times, and how does entry work?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Check-in is after 16:00, and check-out is by 11:00 AM. We utilize a keyless entry system (smart lock) with a code, allowing for flexible self-check-in at any time, even late at night."
+            "text": "Check-in is after 16:00, and check-out is by 11:00 AM. We utilize a keyless entry system (smart lock) with a unique access code, allowing for flexible self-check-in at any time, even late at night."
           }
         },
         {
@@ -71,7 +71,7 @@
           "name": "Can I store my luggage after check-out?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, if your departure is after 11:00 AM, we provide secure luggage storage space on the third floor, monitored by security cameras."
+            "text": "Yes, if your departure is after 11:00 AM, we provide secure luggage storage space on the third floor of the building, which is monitored by security cameras for your peace of mind."
           }
         }
       ]
@@ -79,7 +79,7 @@
     </script>
 
     <style>
-        /* Diamante Del Mar Palette (Navy/White with soft Blue-Grey Accent) */
+        /* Diamante Del Mar Brand Palette (Navy/White with Blue-Grey Accent) */
         :root { --navy: #2c3e50; --gold: #c5a059; --accent-blue: #8fa4b3; --white: #ffffff; --light-grey: #f9f9f9; --border-grey: #eee; --font-headings: 'Playfair Display', serif; --font-body: 'Poppins', sans-serif; }
         body { font-family: var(--font-body); color: var(--navy); background-color: var(--white); margin: 0; line-height: 1.8; }
         h1, h2, h3, h4 { font-family: var(--font-headings); font-weight: 400; margin: 0; }
@@ -89,18 +89,31 @@
         .btn:hover { background: #7a8c99; }
         .section-divider { width: 60px; height: 1px; background: var(--accent-blue); margin: 20px auto; }
 
-        /* Navigation mimicking the modern horizontal logo setup */
+        /* Sticky Navigation Bar with Horizontal Logo */
         nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: white; border-bottom: 1px solid var(--border-grey); position: sticky; top: 0; z-index: 1000; }
         .logo img { max-height: 70px; width: auto; }
         .nav-links { display: flex; gap: 20px; align-items: center; }
         .nav-links a { text-transform: uppercase; font-weight: 600; font-size: 0.9rem; letter-spacing: 1px; }
 
-        /* Hero Section */
-        .hero { height: 90vh; background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/hero-kos.jpg') center/cover; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
-        .hero h1 { font-size: 4rem; margin-bottom: 10px; }
-        .hero p { font-size: 1.5rem; font-weight: 300; }
+        /* header */
+        header { text-align: center; padding: 50px 20px 20px; background: white; }
+        header h1 { font-size: 3rem; margin: 0 0 10px 0; }
+        header p { font-size: 1.3rem; font-weight: 300; color: #666; }
 
-        /* Intro Section */
+        /* Integrated CSS Grid Photo Collage */
+        .hero-collage { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 250px); gap: 15px; padding: 20px 5%; max-width: 1200px; margin: auto; }
+        .collage-img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; transition: 0.3s ease; }
+        .collage-img:hover { transform: scale(1.02); box-shadow: 0 8px 16px rgba(0,0,0,0.1); }
+        .img-large { grid-column: span 2; grid-row: span 2; } 
+        .img-small { grid-column: span 1; grid-row: span 1; }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            .hero-collage { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 180px); }
+            .img-large { grid-column: span 2; grid-row: span 1; }
+        }
+
+        /* Introduction Section */
         .intro { padding: 100px 0; text-align: center; background: var(--white); }
         .intro p { max-width: 800px; margin: auto; font-size: 1.1rem; color: #666; }
 
@@ -114,45 +127,38 @@
         .apt-title { font-size: 1.8rem; color: var(--navy); margin-bottom: 5px; }
         .apt-meta { color: #666; font-size: 0.9rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
 
-        /* Unique Experience Grid */
+        /* Direct Booking Benefits */
+        .direct-booking-benefits { background-color: white; padding: 80px 5%; text-align: center; }
+        .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
+        .benefit-card { background: #fdfdfd; border: 1px solid #eee; padding: 30px; border-radius: 10px; text-align: center; transition: 0.3s ease; }
+        .benefit-card:hover { border-color: var(--accent-blue); transform: translateY(-5px); }
+        .benefit-icon { font-size: 2.5rem; color: var(--gold); margin-bottom: 20px; }
+
+        /* Reviews Section */
+        .guest-testimonials { background-color: #fdfdfd; padding: 80px 5%; text-align: center; border-bottom: 1px solid #eee; }
+        .badge-container { display: flex; justify-content: center; gap: 30px; margin-bottom: 50px; align-items: center; }
+        .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1200px; margin: auto; }
+        .review-card { background: white; padding: 40px; border-radius: 12px; border: 1px solid #eee; position: relative; }
+        .review-text { font-style: italic; color: #444; margin-bottom: 20px; line-height: 1.7; }
+        .review-author { font-weight: bold; color: var(--navy); }
+
+        /* Integrated FAQ Section Styling */
+        .faq { padding: 80px 0; background-color: var(--light-grey); }
+        .faq-section { max-width: 900px; margin: auto; }
+        details { background: var(--white); border: 1px solid var(--border-grey); margin-bottom: 15px; border-radius: 8px; overflow: hidden; transition: 0.3s ease; }
+        details:hover { border-color: var(--accent-blue); box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+        summary { padding: 20px 25px; font-weight: 600; cursor: pointer; list-style: none; position: relative; font-size: 1.1rem; color: var(--navy); }
+        summary::after { content: '+'; position: absolute; right: 25px; top: 50%; transform: translateY(-50%); font-size: 1.5rem; color: var(--accent-blue); transition: 0.3s ease; }
+        details[open] summary::after { content: '-'; transform: translateY(-50%) rotate(180deg); }
+        details[open] summary { border-bottom: 1px solid var(--border-grey); color: var(--accent-blue); }
+        .faq-answer { padding: 25px; background-color: #fcfcfc; color: #555; font-size: 1rem; border-radius: 0 0 8px 8px; }
+
+        /* Experience Section */
         .experience { padding: 100px 0; background: var(--white); text-align: center; }
         .exp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-top: 60px; }
         .exp-card { padding: 20px; }
         .exp-icon { font-size: 3rem; color: var(--accent-blue); margin-bottom: 25px; }
         .exp-card h3 { font-size: 1.4rem; color: var(--navy); margin-bottom: 10px; }
-        .exp-card p { color: #666; font-size: 0.95rem; }
-
-        /* Reviews & Airbnb Badge Section */
-        .guest-testimonials { background-color: #fdfdfd; padding: 80px 5%; text-align: center; border-bottom: 1px solid #eee; }
-        .badge-container { display: flex; justify-content: center; gap: 30px; margin-bottom: 50px; align-items: center; }
-        .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1200px; margin: auto; }
-        .review-card { background: white; padding: 40px; border-radius: 12px; border: 1px solid #eee; position: relative; }
-        .review-author { font-weight: bold; color: var(--navy); margin-top: 15px;}
-
-        /* Book Direct Benefits Section */
-        .direct-booking-benefits { background-color: white; padding: 80px 5%; margin-top: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; }
-        .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
-        .benefit-card { background: #fdfdfd; border: 1px solid #eee; padding: 30px; border-radius: 10px; text-align: center; transition: 0.3s ease; }
-        .benefit-card:hover { border-color: var(--accent-blue); transform: translateY(-5px); }
-
-        /* ============================================ */
-        /* INTEGRATED FAQ SECTION STYLING (CRITICAL FOR GEMINI) */
-        /* ============================================ */
-        .faq { padding: 80px 0; background-color: var(--light-grey); }
-        .faq-section { max-width: 900px; margin: auto; }
-        
-        /* Using semantic HTML5 <details> and <summary> for automatic SEO parsing */
-        details { background: var(--white); border: 1px solid var(--border-grey); margin-bottom: 15px; border-radius: 8px; overflow: hidden; transition: 0.3s ease; }
-        details:hover { border-color: var(--accent-blue); box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
-        summary { padding: 20px 25px; font-weight: 600; cursor: pointer; list-style: none; position: relative; font-size: 1.1rem; color: var(--navy); }
-        
-        /* The '+' and '-' indicators */
-        summary::after { content: '+'; position: absolute; right: 25px; top: 50%; transform: translateY(-50%); font-size: 1.5rem; color: var(--accent-blue); transition: 0.3s ease; }
-        details[open] summary::after { content: '-'; transform: translateY(-50%) rotate(180deg); }
-        details[open] summary { border-bottom: 1px solid var(--border-grey); color: var(--accent-blue); }
-        
-        /* The Answer container */
-        .faq-answer { padding: 25px; background-color: #fcfcfc; color: #555; font-size: 1rem; border-radius: 0 0 8px 8px; }
 
         /* Location Section */
         .location { padding: 100px 0; background: var(--white); }
@@ -181,11 +187,17 @@
         </div>
     </nav>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Diamante Del Mar</h1>
-            <p>Aegean Signature Suites | 200m From Lambi Beach, Kos</p>
-        </div>
+    <header>
+        <h1>Diamante Del Mar</h1>
+        <p>Aegean Signature Suites | 200m From Lambi Beach, Kos</p>
+    </header>
+
+    <section class="hero-collage">
+        <img src="hero-kos.jpg" alt="Kos Suite Turquoise and Marble Design" class="collage-img img-large">
+        <img src="erato-apartment-balcony-swing-kos.jpg" alt="Erato Apartment Balcony Swing" class="collage-img img-small">
+        <img src="phaedra-apartment-bedroom-kos.jpg" alt="Phaedra Apartment Soft Mattresses" class="collage-img img-small">
+        <img src="crete-apartment-spacious-terrace-kos.jpg" alt="Crete Apartment Blue Atmosphere" class="collage-img img-small">
+        <img src="rhodes-apartment-city-view-kos.jpg" alt="Rhodes Apartment Minimalist View" class="collage-img img-small">
     </section>
 
     <section class="intro container">
@@ -201,7 +213,7 @@
             <div class="apt-grid">
                 
                 <div class="apt-card">
-                    <img src="images/phaedra-thumb.jpg" alt="Phaedra Apartment Diamante Del Mar" class="apt-img">
+                    <img src="phaedra-thumb.jpg" alt="Phaedra Apartment Diamante Del Mar" class="apt-img">
                     <div class="apt-content">
                         <h3 class="apt-title">Phaedra</h3>
                         <p class="apt-meta">33m² · 3 GUESTS · 1-BEDROOM APARTMENT</p>
@@ -211,7 +223,47 @@
                 </div>
 
                 <div class="apt-card">
-                    <img src="images/thalia-thumb.jpg" alt="Thalia Apartment Diamante Del Mar" class="apt-img">
+                    <img src="rhodes-thumb.jpg" alt="Rhodes Apartment Diamante Del Mar" class="apt-img">
+                    <div class="apt-content">
+                        <h3 class="apt-title">Rhodes</h3>
+                        <p class="apt-meta">CITY VIEWS · 4 GUESTS · MINIMAL DESIGN</p>
+                        <p style="color: #666; margin-bottom: 25px;">Experience modern urban elegance. Minimalist design featuring stunning Kos city views, perfect for small groups.</p>
+                        <a href="https://airbnb.com/rooms/1379090870030198128" target="_blank" class="btn">Book Now</a>
+                    </div>
+                </div>
+
+                <div class="apt-card">
+                    <img src="crete-thumb.jpg" alt="Crete Apartment Diamante Del Mar" class="apt-img">
+                    <div class="apt-content">
+                        <h3 class="apt-title">Crete (Kriti)</h3>
+                        <p class="apt-meta">40m² Layout · 3 GUESTS · SPACIOUS TERRACE</p>
+                        <p style="color: #666; margin-bottom: 25px;">Generous living space capturing the essence of the Aegean. Features refreshing light-blue decor and a large private terrace.</p>
+                        <a href="https://airbnb.com/rooms/1379024355193792918" target="_blank" class="btn">Book Now</a>
+                    </div>
+                </div>
+
+                <div class="apt-card">
+                    <img src="kos-thumb.jpg" alt="Kos Suite Diamante Del Mar" class="apt-img">
+                    <div class="apt-content">
+                        <h3 class="apt-title">Kos (Diamond)</h3>
+                        <p class="apt-meta">MARBLE DETAILS · TURQUOISE ACCENTS · NEAR AKTI ZOUROUDI</p>
+                        <p style="color: #666; margin-bottom: 25px;">Sophisticated luxury blending marble elements withhandmade turquoise accents. Located breath away from the famous Akti Zouroudi.</p>
+                        <a href="https://airbnb.com/rooms/1377501993631969736" target="_blank" class="btn">Book Now</a>
+                    </div>
+                </div>
+
+                <div class="apt-card">
+                    <img src="erato-thumb.jpg" alt="Erato Apartment Diamante Del Mar" class="apt-img">
+                    <div class="apt-content">
+                        <h3 class="apt-title">Erato</h3>
+                        <p class="apt-meta">GARDEN BALCONY · HANGING SWING · QUEEN BED</p>
+                        <p style="color: #666; margin-bottom: 25px;">Find your zen. Elegant stone and botanical decor featuring a beautiful hanging swing on the private garden balcony.</p>
+                        <a href="https://airbnb.com/rooms/1399088697331101552" target="_blank" class="btn">Book Now</a>
+                    </div>
+                </div>
+
+                <div class="apt-card">
+                    <img src="thalia-thumb.jpg" alt="Thalia Apartment Diamante Del Mar" class="apt-img">
                     <div class="apt-content">
                         <h3 class="apt-title">Thalia</h3>
                         <p class="apt-meta">KING SIZE BED · 3 GUESTS · GUEST FAVORITE</p>
@@ -219,8 +271,32 @@
                         <a href="https://airbnb.com/rooms/1399077797267609344" target="_blank" class="btn">Book Now</a>
                     </div>
                 </div>
-                
-                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="container direct-booking-benefits" id="booking">
+        <div style="text-align: center;">
+            <span style="color: var(--accent-blue); font-weight: bold; text-transform: uppercase; letter-spacing: 2px;">Exclusivity</span>
+            <h2 style="font-size: 2.2rem; margin-top: 10px; color: var(--navy);">Book Direct & Enjoy Exclusive Privileges</h2>
+        </div>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">🏷️</div>
+                <h3>Best Price Guaranteed</h3>
+                <p>Save on platform fees. Booking directly ensures you get the absolute lowest rate available.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🔄</div>
+                <h3>Flexible Cancellations</h3>
+                <p>Enjoy greater cancellation flexibility and direct concave support compared to OTA platforms.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🎁</div>
+                <h3>Exclusive Perks</h3>
+                <p>Receive complimentary perks like early check-in (subject to availability).</p>
+            </div>
         </div>
     </section>
 
@@ -236,33 +312,17 @@
             <h2 style="font-size: 2.2rem; margin-bottom: 50px; color: var(--navy);">What Our Guests Are Saying</h2>
             <div class="review-grid">
                 <div class="review-card">
-                    <p style="font-style: italic; color: #444; margin-bottom: 20px;">The rich, soft mattresses are exactly what we needed. We will be back!</p>
+                    <p class="review-text">The rich, soft mattresses are exactly what we needed. Just 200m to Lambi beach. We will be back!</p>
                     <p class="review-author">— Maria, Greece</p>
                 </div>
+                <div class="review-card">
+                    <p class="review-text">Loved the botanical decor in Erato and the hanging swing. It felt luxurious and was an easy walk into Kos Town.</p>
+                    <p class="review-author">— Sarah, Germany</p>
                 </div>
-        </div>
-    </section>
-
-    <section class="container direct-booking-benefits" id="booking">
-        <div style="text-align: center;">
-            <span style="color: var(--accent-blue); font-weight: bold; text-transform: uppercase;">Direct Advantages</span>
-            <h2 style="font-size: 2.2rem; margin-top: 10px; color: var(--navy);">Book Direct & Enjoy Exclusive Privileges</h2>
-        </div>
-        <div class="benefits-grid">
-            <div class="benefit-card"><h3>Best Price Guaranteed</h3><p>Platform fee savings mean the absolute lowest rate available.</p></div>
-            <div class="benefit-card"><h3>Flexible Cancellations</h3><p>Enjoy greater cancellation and change flexibility compared to OTA platforms.</p></div>
-            <div class="benefit-card"><h3>Exclusive Perks</h3><p>Receive complimentary perks like early check-in (subject to availability).</p></div>
-        </div>
-    </section>
-
-    <section class="experience" id="experience">
-        <div class="container">
-            <span style="color: var(--accent-blue); font-weight: 600;">The Diamante Experience</span>
-            <h2 style="font-size: 2.5rem; color: var(--navy); margin-top: 10px;">More Than Accommodation</h2>
-            <div class="exp-grid">
-                <div class="exp-card"><div class="exp-icon">🏖️</div><h3>Lambi Beachfront</h3><p>Walk to the crystal clear Aegean Sea in just 3 minutes (200m).</p></div>
-                <div class="exp-card"><div class="exp-icon">💻</div><h3>Modern Comfort</h3><p>Dual AC, 2 Smart TVs, Espresso machines, and High-Speed 50MB+ WiFi.</p></div>
-                <div class="exp-card"><div class="exp-icon">🔑</div><h3>Curated Privacy</h3><p>Keyless self check-in and absolute tranquility in a quiet Kos neighborhood.</p></div>
+                <div class="review-card">
+                    <p class="review-text">Thalia is a true gem. Perfect King bed, super fast WiFi, and a quiet environment near everything. highly recommended.</p>
+                    <p class="review-author">— John, UK</p>
+                </div>
             </div>
         </div>
     </section>
@@ -270,7 +330,7 @@
     <section class="faq" id="faq">
         <div class="container">
             <div style="text-align: center; margin-bottom: 60px;">
-                <span style="color: var(--accent-blue); font-weight: 600; text-transform: uppercase;">Authority</span>
+                <span style="color: var(--accent-blue); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Authority</span>
                 <h2 style="font-size: 2.5rem; color: var(--navy); margin-top: 10px;">Frequently Asked Questions</h2>
                 <div class="section-divider"></div>
                 <p style="color: #666; max-width: 600px; margin: auto;">Authoritative answers regarding amenities, location, and your stay at Diamante Del Mar.</p>
@@ -300,7 +360,7 @@
                 </details>
 
                 <details>
-                    <summary>How close is the property to the beach and Kos Town center?</summary>
+                    <summary>How close is the property to Lambi Beach and Kos Town center?</summary>
                     <article class="faq-answer">
                         <p>Phaedra’s location is ideal. Diamante Del Mar is just 200 meters—approximately a 3-minute walk—from the renowned Lambi Beach and a short 1.1km walk from Kos Harbor and the historic center.</p>
                     </article>
@@ -309,7 +369,7 @@
                 <details>
                     <summary>How does check-in work and what are the times?</summary>
                     <article class="faq-answer">
-                        <p>Check-in is after 16:00, and check-out is by 11:00 AM. We utilize a keyless entry system (smart lock) with a code, allowing for flexible self-check-in at any time, even late at night, without requiring an in-person meeting.</p>
+                        <p>Check-in is after 16:00, and check-out is by 11:00 AM. We utilize a keyless entry system (smart lock) with a unique code, allowing for flexible self-check-in at any time, even late at night, without requiring an in-person meeting.</p>
                     </article>
                 </details>
 
@@ -323,10 +383,39 @@
                 <details>
                     <summary>Can I store my luggage after check-out?</summary>
                     <article class="faq-answer">
-                        <p>Yes, if your departure is after 11:00 AM, we provide secure luggage storage space on the third floor, which is monitored by security cameras for your absolute peace of mind.</p>
+                        <p>Yes, if your departure is after 11:00 AM, we provide secure luggage storage space on the third floor of the building, which is monitored by security cameras for your absolute peace of mind.</p>
                     </article>
                 </details>
 
+            </div>
+        </div>
+    </section>
+
+    <section class="experience" id="experience">
+        <div class="container">
+            <span style="color: var(--accent-blue); font-weight: 600;">The Diamante Experience</span>
+            <h2 style="font-size: 2.5rem; color: var(--navy); margin-top: 10px;">More Than Accommodation</h2>
+            <div class="exp-grid">
+                <div class="exp-card">
+                    <div class="exp-icon">🏖️</div>
+                    <h3>Lambi Beachfront</h3>
+                    <p>Walk to the crystal clear Aegean Sea in just 3 minutes (200m).</p>
+                </div>
+                <div class="exp-card">
+                    <div class="exp-icon">💻</div>
+                    <h3>Modern Comfort</h3>
+                    <p>Dual AC, 2 Smart TVs, Espresso machines, and High-Speed 50MB+ WiFi.</p>
+                </div>
+                <div class="exp-card">
+                    <div class="exp-icon">🔑</div>
+                    <h3>Curated Privacy</h3>
+                    <p>Keyless self check-in and absolute tranquility in a quiet Kos neighborhood.</p>
+                </div>
+                <div class="exp-card">
+                    <div class="exp-icon">🌟</div>
+                    <h3>Authoritative Trust</h3>
+                    <p>Rated perfect 5.0/5 and Guest Favorite on Airbnb, confirming passionate hospitality.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -341,11 +430,12 @@
                     <li><span>🏖️ Lambi Beach</span> <strong>3 min walk (200m)</strong></li>
                     <li><span>🌊 Akti Zouroudi</span> <strong>5 min walk</strong></li>
                     <li><span>⚓ Kos Town Port</span> <strong>15 min walk (1.1km)</strong></li>
+                    <li><span>🏛️ Ancient Agora</span> <strong>18 min walk (1.3km)</strong></li>
                     <li><span>✈️ Kos Airport (KGS)</span> <strong>35 min drive (24km)</strong></li>
                 </ul>
             </div>
             <div class="map-placeholder">
-                <img src="images/map-placeholder.jpg" alt="Map Location of Diamante Del Mar Kos" style="width: 100%; border-radius: 8px;">
+                <img src="map-placeholder.jpg" alt="Map Location of Diamante Del Mar Kos" style="width: 100%; border-radius: 8px;">
             </div>
         </div>
     </section>
@@ -355,382 +445,10 @@
             <h3 style="color: var(--white); font-size: 1.8rem; margin-bottom: 10px;">Diamante Del Mar</h3>
             <p>Aegean Signature Suites | Kos Island, Greece</p>
             <div class="section-divider" style="background: #ccc;"></div>
-            <p>info@diamantedelmar.gr | +30 69X XXXXXX</p>
-            <p style="margin-top: 30px; font-size<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diamante Del Mar | Luxury Apartments 200m from Lambi Beach, Kos</title>
-    <meta name="description" content="Choose from 6 premium, newly renovated apartments at Diamante Del Mar. Just 200m from Lambi Beach, Kos. Modern design, Aegean views, and Greek hospitality.">
-    <style>
-        :root { --blue: #0077b6; --gold: #c5a059; --dark: #2c3e50; --light: #f8f9fa; }
-        body { font-family: 'Helvetica Neue', sans-serif; margin: 0; color: var(--dark); line-height: 1.6; background-color: #fafafa; }
-        nav { display: flex; justify-content: space-between; padding: 20px 5%; background: white; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; }
-        
-        /* New Header Styling */
-        header { text-align: center; padding: 50px 20px 20px; background: white; }
-        header h1 { color: var(--blue); font-size: 2.8rem; margin: 0 0 10px 0; }
-        header p { font-size: 1.3rem; color: #666; margin: 0; }
-
-        /* The CSS Grid Collage */
-        .hero-collage {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: 250px 250px;
-            gap: 15px;
-            padding: 20px 5%;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .collage-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Keeps images from stretching */
-            border-radius: 12px;
-            transition: transform 0.3s ease;
-        }
-        .collage-img:hover {
-            transform: scale(1.02); /* Slight zoom effect when hovered */
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-        }
-        
-        /* Making one image the "Hero" large image on the left */
-        .img-large { grid-column: span 2; grid-row: span 2; } 
-        .img-small { grid-column: span 1; grid-row: span 1; }
-
-        /* Mobile adjustments for the collage */
-        @media (max-width: 768px) {
-            .hero-collage {
-                grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: 200px 150px 150px;
-            }
-            .img-large { grid-column: span 2; grid-row: span 1; }
-        }
-
-        /* Apartment Grid */
-        .container { max-width: 1200px; margin: auto; padding: 50px 20px; }
-        .apartment-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { border: 1px solid #ddd; border-radius: 10px; overflow: hidden; transition: 0.3s; background: white; }
-        .card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        .card-content { padding: 25px; text-align: center; }
-        .btn { background: var(--blue); color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; display: inline-block; font-weight: bold; margin-top: 15px; }
-        
-        footer { background: var(--dark); color: white; padding: 40px; text-align: center; margin-top: 50px; }
-    </style>
-</head>
-<body>
-
-<nav style="display: flex; justify-content: space-between; align-items: center; padding: 5px 5%; background: white; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100;">
-    
-    <a href="index.html" style="text-decoration: none; display: flex; align-items: center;">
-        <img src="diamante-del-mar-horizontal-logo.jpg" alt="Diamante Del Mar - Aegean Signature Suites" style="max-height: 100px; width: auto; object-fit: contain;">
-    </a>
-
-    <div>
-        <a href="index.html#collection" style="text-decoration:none; color:#2c3e50; font-weight: bold; font-size: 1.1rem;">Our Collection</a>
-    </div>
-</nav>
-<header>
-    <h1>Seafront Living in Kos Town</h1>
-    <p>6 Designer Apartments | 200m from Lambi Beach</p>
-</header>
-
-<section class="hero-collage">
-   <img src="KOS.jpg?text=Kos+Apartment" alt="Kos Apartment Turquoise and Marble Design" class="collage-img img-medium">
-    <img src="CRETE.jpg?text=Crete+Terrace" alt="Crete Apartment Blue Atmosphere" class="collage-img img-medium">
-    <img src="RHODES.jpg?text=Rhodes+Living+Room" alt="Rhodes Apartment Minimalist View" class="collage-img img-medium"><br>
-    <img src="phaedra.jpeg?text=Phaedra+Bedroom" alt="Phaedra Apartment Soft Mattresses" class="collage-img iimg-medium">
-    <img src="ERATO.jpg?text=Erato+Swing" alt="Erato Apartment Balcony Swing" class="collage-img img-medium">
-    <img src="Thalia.jpg?text=Thalia+Kitchen" alt="Thalia Apartment Minimalist View" class="collage-img img-medium">
-    
-    
-    
-</section>
-
-<div class="container" id="collection">
-    <h2 style="text-align: center; margin-bottom: 40px; font-size: 2rem;">The Diamante Collection</h2>
-    <div class="apartment-grid">
-        <div class="card">
-            <div class="card-content">
-                <h3 style="margin-top: 0;">Kos (Diamond of the Sea)</h3>
-                <p>31m² | Marble Details & Turquoise Accents</p>
-                <a href="kos-studio.html" class="btn">View Details</a>
-            </div>
+            <p>info@diamantedelmar.gr | <a href="#location">Prime Location near Lambi Beach</a></p>
+            <p style="margin-top: 30px; font-size: 0.8rem;">&copy; 2026 Diamante Del Mar. All rights reserved.</p>
         </div>
-        <div class="card">
-            <div class="card-content">
-                <h3 style="margin-top: 0;">Rhodes</h3>
-                <p>Modern & Minimal | City & Sea Views</p>
-                <a href="rhodes.html" class="btn">View Details</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-content">
-                <h3 style="margin-top: 0;">Crete (Kriti)</h3>
-                <p>40m² | Sea-Atmosphere Blue Design</p>
-                <a href="crete.html" class="btn">View Details</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-content">
-               <h3 style="margin-top: 0;">Phaedra</h3>
-                <p>33m² | Modern Elegance | 1 Bedroom</p>
-                <a href="phaedra.html" class="btn">View Details</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-content">
-                <h3 style="margin-top: 0;">Erato</h3>
-                <p>Garden-Style Balcony with Hanging Swing</p>
-                <a href="erato.html" class="btn">View Details</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-content">
-                <h3 style="margin-top: 0;">Thalia</h3>
-                <p>Natural Stone & Floral Harmony</p>
-                <a href="thalia.html" class="btn">View Details</a>
-            </div>
-        </div>
-    </div>
-</div>
-<style>
-    .direct-booking-benefits {
-        background-color: white;
-        padding: 60px 5%;
-        margin-top: 30px;
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    }
-    .benefits-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 30px;
-        margin-top: 40px;
-    }
-    .benefit-card {
-        background: #fdfdfd;
-        border: 1px solid #eee;
-        padding: 30px;
-        border-radius: 10px;
-        text-align: center;
-        transition: 0.3s ease;
-    }
-    .benefit-card:hover {
-        border-color: #0077b6; /* Your brand blue */
-        transform: translateY(-5px);
-    }
-    .benefit-icon {
-        font-size: 2.5rem;
-        color: #c5a059; /* Your brand gold/beige accent */
-        margin-bottom: 20px;
-    }
-    .benefit-card h3 {
-        color: #2c3e50;
-        margin-bottom: 10px;
-        font-size: 1.3rem;
-    }
-    .benefit-card p {
-        color: #666;
-        font-size: 0.95rem;
-    }
-</style>
-
-<section class="container direct-booking-benefits">
-    <div style="text-align: center;">
-        <span style="color: #c5a059; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;">Exclusivity</span>
-        <h2 style="font-size: 2.2rem; margin-top: 10px; color: #2c3e50;">Book Direct with Us & Enjoy Premium Privileges</h2>
-        <p style="max-width: 600px; margin: 20px auto; color: #666;">Experience the Diamante advantage. We guarantee the absolute best rate and exclusive benefits when you secure your stay directly with us.</p>
-    </div>
-
-    <div class="benefits-grid">
-        <div class="benefit-card">
-            <div class="benefit-icon">🏷️</div>
-            <h3>Best Price Guaranteed</h3>
-            <p>Save on platform fees. Booking directly ensures you get the absolute lowest rate available.</p>
-        </div>
-        <div class="benefit-card">
-            <div class="benefit-icon">🔄</div>
-            <h3>Flexible Cancellations</h3>
-            <p>Enjoy more flexible cancellation policies and change options compared to OTA platforms.</p>
-        </div>
-        <div class="benefit-card">
-            <div class="benefit-icon">📞</div>
-            <h3>Direct Communication</h3>
-            <p>Connect directly with us for personalized requests and immediate concierge support.</p>
-        </div>
-        <div class="benefit-card">
-            <div class="benefit-icon">🎁</div>
-            <h3>Exclusive Perks</h3>
-            <p>Receive complimentary perks like early check-in or late check-out (subject to availability).</p>
-        </div>
-    </div>
-</section>
-    <style>
-    .guest-testimonials {
-        background-color: #f9f9f9; /* Slight grey background to separate from white sections */
-        padding: 80px 5%;
-        margin-top: 50px;
-        text-align: center;
-    }
-    .badge-container {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        margin-bottom: 50px;
-        align-items: center;
-    }
-    .review-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 30px;
-        max-width: 1200px;
-        margin: auto;
-    }
-    .review-card {
-        background: white;
-        padding: 40px;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        position: relative;
-    }
-    .review-card::before {
-        content: '"';
-        font-size: 5rem;
-        color: #e0e0e0;
-        position: absolute;
-        top: 10px;
-        left: 20px;
-        font-family: serif;
-    }
-    .review-text {
-        font-style: italic;
-        color: #444;
-        margin-bottom: 20px;
-        line-height: 1.7;
-    }
-    .review-author {
-        font-weight: bold;
-        color: #2c3e50;
-    }
-</style>
-
-<section class="guest-testimonials">
-    <div class="container">
-        <div class="badge-container">
-            <img src="airbnb-badge.png" alt="Airbnb Superhost and Guest Favorite Badges" style="max-height: 80px; width: auto;">
-            <div style="text-align: left;">
-                <div style="font-size: 2.5rem; font-weight: bold; color: #2c3e50;">5.0 / 5</div>
-                <div style="color: #666;">Rated by our guests on Airbnb</div>
-            </div>
-        </div>
-
-        <h2 style="font-size: 2.2rem; margin-bottom: 50px; color: #2c3e50;">What Our Guests Are Saying</h2>
-
-        <div class="review-grid">
-            <div class="review-card">
-                <p class="review-text">The Phaedra suite was so comfortable! The rich, soft mattresses are exactly what we needed. Just 200m to Lambi beach. We will be back!</p>
-                <p class="review-author">— Maria, Greece</p>
-            </div>
-            <div class="review-card">
-                <p class="review-text">Thalia is a true gem. Loved the natural stone decor and the King Size bed. Perfect location close to everything but in a quiet neighborhood.</p>
-                <p class="review-author">— John, UK</p>
-            </div>
-            <div class="review-card">
-                <p class="review-text">The turquoise accents and marble details in the Kos studio are stunning. It felt luxurious and was an easy walk into Kos Town center.</p>
-                <p class="review-author">— Sarah, Germany</p>
-            </div>
-        </div>
-    </div>
-</section>
-    <style>
-    .prime-location {
-        padding: 60px 5%;
-        background-color: white;
-        margin-top: 50px;
-        border-radius: 12px;
-        border: 1px solid #eee;
-    }
-    .location-list {
-        list-style: none;
-        padding: 0;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 20px;
-        margin-top: 40px;
-    }
-    .location-item {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        padding: 15px;
-        background: #fdfdfd;
-        border-radius: 8px;
-    }
-    .location-icon {
-        font-size: 1.5rem;
-    }
-    .landmark-name {
-        font-weight: bold;
-        color: #2c3e50;
-    }
-    .landmark-dist {
-        color: #666;
-        font-size: 0.9rem;
-    }
-</style>
-
-<section class="container prime-location" id="location">
-    <div style="text-align: center;">
-        <span style="color: #c5a059; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;">Location</span>
-        <h2 style="font-size: 2.2rem; margin-top: 10px; color: #2c3e50;">Perfectly Positioned in Kos Town</h2>
-        <p style="max-width: 600px; margin: 20px auto; color: #666;">Diamante Del Mar offers a unique blend of beachfront tranquility and urban convenience.</p>
-    </div>
-
-    <ul class="location-list">
-        <li class="location-item">
-            <span class="location-icon">🏖️</span>
-            <div>
-                <div class="landmark-name">Lambi Beach</div>
-                <div class="landmark-dist">3-Minute Walk (200m)</div>
-            </div>
-        </li>
-        <li class="location-item">
-            <span class="location-icon">🌊</span>
-            <div>
-                <div class="landmark-name">Akti Zouroudi</div>
-                <div class="landmark-dist">5-Minute Walk</div>
-            </div>
-        </li>
-        <li class="location-item">
-            <span class="location-icon">⚓</span>
-            <div>
-                <div class="landmark-name">Kos Town Port</div>
-                <div class="landmark-dist">15-Minute Walk (1.1km)</div>
-            </div>
-        </li>
-        <li class="location-item">
-            <span class="location-icon">🏛️</span>
-            <div>
-                <div class="landmark-name">Ancient Agora</div>
-                <div class="landmark-dist">18-Minute Walk (1.3km)</div>
-            </div>
-        </li>
-        <li class="location-item">
-            <span class="location-icon">✈️</span>
-            <div>
-                <div class="landmark-name">Kos Airport (KGS)</div>
-                <div class="landmark-dist">30-Minute Drive (24km)</div>
-            </div>
-        </li>
-    </ul>
-</section>
-    
-<footer>
-    <p>&copy; 2026 Diamante Del Mar - Kos Island, Greece</p>
-    <p>200m from Lambi Beach | 1.1km from Kos Port</p>
-</footer>
+    </footer>
 
 </body>
 </html>
