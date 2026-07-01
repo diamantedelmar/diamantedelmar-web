@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code - Hippocrates Festival Guide | Diamante del Mar</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-navy: #0b1e36;
+            --accent-gold: #c5a880;
+            --bg-sand: #fbf9f6;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-sand);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* The Printable Card */
+        .qr-card {
+            background-color: var(--white);
+            width: 100%;
+            max-width: 450px;
+            padding: 50px 40px;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(11, 30, 54, 0.08);
+            text-align: center;
+            position: relative;
+            border: 1px solid rgba(197, 168, 128, 0.3);
+        }
+
+        /* Inner decorative border */
+        .qr-card::before {
+            content: '';
+            position: absolute;
+            top: 15px; left: 15px; right: 15px; bottom: 15px;
+            border: 1px solid rgba(197, 168, 128, 0.4);
+            border-radius: 8px;
+            pointer-events: none;
+        }
+
+        .brand-name {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 0.85rem;
+            color: var(--accent-gold);
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--primary-navy);
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            color: #57606f;
+            line-height: 1.6;
+            margin-bottom: 35px;
+            padding: 0 10px;
+        }
+
+        .qr-wrapper {
+            background: var(--white);
+            padding: 15px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #f1f2f6;
+            margin-bottom: 30px;
+        }
+
+        .qr-wrapper img {
+            display: block;
+            width: 200px;
+            height: 200px;
+        }
+
+        .footer-note {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary-navy);
+            font-weight: 500;
+        }
+
+        /* Print Button - Hidden during actual printing */
+        .btn-print {
+            margin-top: 40px;
+            padding: 14px 30px;
+            background-color: var(--primary-navy);
+            color: var(--white);
+            border: none;
+            border-radius: 6px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(11, 30, 54, 0.2);
+        }
+
+        .btn-print:hover {
+            background-color: var(--accent-gold);
+            transform: translateY(-2px);
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+                justify-content: flex-start;
+            }
+            
+            .btn-print {
+                display: none; /* Hides the button on the printed paper */
+            }
+
+            .qr-card {
+                box-shadow: none;
+                border: none;
+                max-width: 100%;
+                padding: 40px;
+            }
+
+            .qr-card::before {
+                border-color: #000;
+            }
+
+            .title, .footer-note {
+                color: #000;
+            }
+
+            .brand-name {
+                color: #555;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="qr-card">
+        <div class="brand-name">Diamante del Mar</div>
+        <h1 class="title">Summer Events<br>Guide 2026</h1>
+        <p class="subtitle">Scan the QR code with your camera to explore our interactive digital guide for the Hippocrates Festival, complete with directions and event details.</p>
+        
+        <div class="qr-wrapper">
+            <!-- Dynamic QR Code pointing to your URL -->
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https%3A%2F%2Fwww.diamantedelmar.gr%2Fippokrateia_2026_guide.html&margin=0" alt="QR Code to Events Guide">
+        </div>
+
+        <div class="footer-note">Kos Island • Greece</div>
+    </div>
+
+    <!-- This button lets you easily print the card -->
+    <button class="btn-print" onclick="window.print()">
+        🖨️ Print Display Card
+    </button>
+
+</body>
+</html>
